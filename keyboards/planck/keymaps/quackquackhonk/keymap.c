@@ -66,7 +66,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
             tap_code(KC_TAB);
             set_mods(mod_state);
         }
-    }   
+    }
     else if (mod_state & MOD_MASK_ALT) {
       if (clockwise) {
         tap_code(KC_BRIU);
@@ -137,7 +137,7 @@ bool caps_word_press_user(uint16_t keycode) {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-    
+
     /* COLEMAK
     * ,-----------------------------------------------------------------------------------.
     * |  Tab |  Q   |  W   |  F   |  P   |  G   |  J   |  L   |  U   |  Y   |  ;   | Bksp |
@@ -149,10 +149,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * | Lead | LCtl | LGUI | LAlt |  Num | LShft| Space| Func | RAlt | RGUI | Hypr |Toggle|
     * `-----------------------------------------------------------------------------------'
     */
-    [_COLEMAK] = LAYOUT_planck_grid(KC_MUTE , KC_Q   , KC_W   , KC_F   , KC_P    , KC_B   , KC_J   , KC_L , KC_U   , KC_Y   , KC_SCLN, KC_BSPC,
-                                   CTLESC  , KC_A   , KC_R   , KC_S   , KC_T    , KC_G   , KC_M   , KC_N , KC_E   , KC_I   , KC_O   , KC_QUOT,
-                                   KC_TAB  , KC_X   , KC_C   , KC_D   , KC_V    , KC_Z   , KC_K   , KC_H , KC_COMM, KC_DOT , KC_SLSH, KC_ENTER,
-                                   QK_LEAD, KC_LCTL, KC_LGUI, KC_LALT, NUMSYM, KC_LSFT , KC_SPC, FUNCS, KC_RALT, KC_MEH , KC_HYPR, TOGGLES),
+    [_COLEMAK] = LAYOUT_planck_grid(KC_MPLY , KC_Q   , KC_W   , KC_F   , KC_P    , KC_B   , KC_J   , KC_L , KC_U   , KC_Y   , KC_SCLN, KC_BSPC,
+                                    CTLESC  , KC_A   , KC_R   , KC_S   , KC_T    , KC_G   , KC_M   , KC_N , KC_E   , KC_I   , KC_O   , KC_QUOT,
+                                    KC_TAB  , KC_X   , KC_C   , KC_D   , KC_V    , KC_Z   , KC_K   , KC_H , KC_COMM, KC_DOT , KC_SLSH, KC_ENTER,
+                                    QK_LEAD, KC_LCTL, KC_LGUI, KC_LALT, NUMSYM, KC_LSFT , KC_SPC, FUNCS, KC_RALT, KC_MEH , KC_HYPR, TOGGLES),
 
     /* QWERTY
     * ,-----------------------------------------------------------------------------------.
@@ -165,7 +165,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * | Med  | Ctrl | LGUI | Alt  |  Num |    Space    | Func | Alt  | RGUI | Ctrl |Toggle|
     * `-----------------------------------------------------------------------------------'
     */
-    [_QWERTY] = LAYOUT_planck_grid(KC_MUTE, KC_Q   , KC_W   , KC_E   , KC_R    , KC_T   , KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , KC_BSPC,
+    [_QWERTY] = LAYOUT_planck_grid(KC_MPLY, KC_Q   , KC_W   , KC_E   , KC_R    , KC_T   , KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , KC_BSPC,
                                   CTLESC  , KC_A   , KC_S   , KC_D   , KC_F    , KC_G   , KC_H   , KC_J   , KC_K   , KC_L   , KC_SCLN, KC_QUOT,
                                   KC_TAB  , KC_Z   , KC_X   , KC_C   , KC_V    , KC_B   , KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH, KC_ENTER,
                                   QK_LEAD , KC_LCTL, KC_LGUI, KC_LALT, NUMSYM, KC_LSFT  , KC_SPC , FUNCS  , KC_RALT, KC_MEH , KC_HYPR, TOGGLES),
@@ -181,7 +181,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * | Func | LCtl | LAlt | LShft| Space|GamNum| Func |      |      |      |      |Toggle|
     * `-----------------------------------------------------------------------------------'
     */
-    [_GAMING] = LAYOUT_planck_grid(KC_MUTE , KC_Q   , KC_W   , KC_E   , KC_R    , KC_T   , KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , KC_BSPC,
+    [_GAMING] = LAYOUT_planck_grid(KC_MPLY , KC_Q   , KC_W   , KC_E   , KC_R    , KC_T   , KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , KC_BSPC,
                                    CTLESC  , KC_A   , KC_S   , KC_D   , KC_F    , KC_G   , KC_H   , KC_J   , KC_K   , KC_L   , KC_SCLN, KC_QUOT,
                                    KC_TAB  , KC_Z   , KC_X   , KC_C   , KC_V    , KC_B   , KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH, KC_ENTER,
                                    FUNCS   , KC_GRV , KC_F13 , KC_LALT, GAMNUM  , KC_SPC , KC_LSFT,XXXXXXX, XXXXXXX, XXXXXXX, QK_LEAD, TOGGLES),
@@ -227,7 +227,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * |------+------+------+------+------+------+------+------+------+------+------+------|
     * |      |      |      |      |      |    Space    |  0   |  .   |  ,   |      |      |
     * `-----------------------------------------------------------------------------------'
-    */ 
+    */
     [_NUMSYM] = LAYOUT_planck_grid(XXXXXXX, KC_EXLM, KC_AT  , KC_HASH, KC_DLR , KC_LBRC, KC_RBRC, KC_1   , KC_2   , KC_3   , KC_EQL , _______,
                                    KC_TILD, KC_PERC, KC_CIRC, KC_AMPR, KC_UNDS, KC_LPRN, KC_RPRN, KC_4   , KC_5   , KC_6   , KC_ASTR, KC_SLSH,
                                    KC_GRV , XXXXXXX, KC_BSLS, KC_PIPE, XXXXXXX, KC_LCBR, KC_RCBR, KC_7   , KC_8   , KC_9   , KC_MINS, KC_PLUS,
